@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEDZYME Lab Supplies</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fa;color:#222}
+nav{position:sticky;top:0;background:rgba(0,80,120,.85);backdrop-filter:blur(8px);z-index:99}
+.container{width:90%;max-width:1200px;margin:auto}
+.navwrap{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+.menu a{color:#fff;margin:0 10px;text-decoration:none}
+.hero{display:flex;align-items:center;min-height:85vh;background:linear-gradient(135deg,#0c5b83,#16a085);color:#fff}
+.hero .container{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.hero img,.ceo img,.gallery img,.partners img,.service img,.testimonial img{max-width:100%;border-radius:10px}
+.btn{display:inline-block;background:#fff;color:#0c5b83;padding:12px 20px;text-decoration:none;border-radius:30px}
+.section{padding:60px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;padding:15px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.stats{background:#0c5b83;color:#fff;padding:40px 0}.statsgrid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.counter{font-size:34px;font-weight:bold}
+.ceoflex{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.carousel{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}.gallery{display:flex;overflow:auto;gap:15px}
+.carousel img{height:120px;width:100%;object-fit:contain}.gallery img{height:180px}.ceo-frame{padding:12px;border:4px solid #d4af37;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,.2);background:#fff}.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.why-card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,.1);text-align:center}
+.contactbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+footer{background:#111;color:#ddd;padding:30px;text-align:center}
+footer a{color:#ddd;margin:0 8px;text-decoration:none}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;text-decoration:none;font-size:22px}
+.fade{opacity:0;transform:translateY(30px);transition:1s}.fade.show{opacity:1;transform:none}
+
+@media (max-width:992px){
+.hero .container,.ceoflex{flex-direction:column;text-align:center}
+.statsgrid{grid-template-columns:repeat(2,1fr);gap:20px}
+.navwrap{flex-direction:column;gap:10px}
+.menu{display:flex;flex-wrap:wrap;justify-content:center}
+}
+@media (max-width:600px){
+.container{width:95%}
+.menu a{margin:6px;font-size:14px}
+.hero{min-height:auto;padding:50px 0}
+.hero img{width:100%;max-width:340px}
+.statsgrid{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}
+.contactbox{grid-template-columns:1fr}
+.carousel img{height:70px}
+.gallery img{height:140px}
+.whatsapp{right:12px;bottom:12px}
+}
+
+/* CEO block (merged styles) */
+.ceoflex{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.ceo-frame{
+    flex:1;
+    max-width:340px;
+    padding:12px;
+    background:#fff;
+    border:4px solid #d4af37;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.ceo-frame img{
+    width:100%;
+    border-radius:15px;
+    display:block;
+}
+
+.ceo-content{
+    flex:1.5;
+    min-width:320px;
+}
+
+.ceo-tag{
+    display:inline-block;
+    background:#0c5b83;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+
+.ceo-title{
+    font-size:38px;
+    color:#0c5b83;
+    margin-bottom:5px;
+}
+
+.ceo-name{
+    font-size:28px;
+    color:#16a085;
+    margin-bottom:25px;
+}
+
+.ceo-text{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+    text-align:justify;
+    margin-bottom:18px;
+}
+
+.ceo-sign{
+    margin-top:30px;
+    border-left:5px solid #16a085;
+    padding-left:15px;
+    font-size:17px;
+    color:#333;
+}
+
+@media(max-width:768px){
+    .ceoflex{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .ceo-content{
+        text-align:left;
+        width:100%;
+    }
+
+    .ceo-title{
+        font-size:30px;
+    }
+
+    .ceo-name{
+        font-size:24px;
+    }
+}
+
+/* Social Icons */
+.social-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 22px;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:bold;
+    transition:.35s;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.social-icons a i{
+    font-size:34px;
+}
+
+.social-icons a:hover{
+    transform:translateY(-6px);
+}
+
+.social-whatsapp{
+    background:#25D366;
+}
+
+.social-facebook{
+    background:#1877F2;
+}
+
+.social-instagram{
+    background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);
+}
+
+.social-tiktok{
+    background:#000;
+}
+
+/* Footer */
+.footer-social{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:25px;
+}
+
+.footer-social a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.footer-social a i{
+    font-size:30px;
+}
+
+.footer-social a:hover{
+    color:#16a085;
+}
+
+/* ==========================
+   Product Gallery
+========================== */
+.product-gallery{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(210px, 1fr));
+    gap:16px;
+    margin-top:30px;
+}
+
+@media(max-width:1200px){
+    .product-gallery{
+        grid-template-columns:repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media(max-width:768px){
+    .product-gallery{
+        grid-template-columns:1fr;
+    }
+}
+
+.product-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.35s;
+    text-align:center;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.product-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block;
+    background:#e9eef3;
+}
+
+.product-card p{
+    padding:0 15px 16px;
+}
+
+.product-card h3{
+    color:#0c5b83;
+    margin:18px 15px 10px;
+    font-size:22px;
+}
+
+.product-card p{
+    padding:0 15px 20px;
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+    .product-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .product-card img{
+        height:220px;
+    }
+}
+
+</style>
+<nav><div class="container navwrap"><div style="display:flex;align-items:center;gap:10px;"><img src="img/medzyme-logo.jpg.jpg" alt="MEDZYME Logo" style="width:55px;height:55px;border-radius:50%;object-fit:cover;"><h2 style="color:#fff;margin:0;">MEDZYME</h2></div><div class="menu">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#why">Why</a><a href="#ceo">CEO</a><a href="#gallery">Gallery</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a></div></div></nav>
+<section id="home" class="hero"><div class="container"><div><h1>Quality. Precision. Accuracy. Affordability.</h1><p>Supplying premium laboratory products to healthcare professionals.</p><a class="btn" href="#services">Explore Services</a></div><img src="img/hero-lab.jpg.jpg" width="450"></div></section>
+<section id="services" class="section fade">
+  <div class="container">
+    <h2 style="text-align:center;font-size:40px;color:#0c5b83;margin-bottom:12px;">Services</h2>
+    <p style="max-width:900px;margin:0 auto 40px;text-align:center;font-size:18px;line-height:1.9;color:#555;">
+      Premium lab supplies and professional support—designed to help healthcare teams deliver fast, accurate results.
+    </p>
+
+    <div class="grid">
+      <div class="card service">
+        <img src="img/service1.jpg" alt="Lab Equipment">
+        <h3 style="color:#0c5b83;margin-top:10px;">Lab Equipment</h3>
+        <p style="color:#666;line-height:1.9;">
+          Precision laboratory instruments and diagnostic equipment for accurate testing—built for reliability, clarity, and better outcomes.
+        </p>
+      </div>
+
+      <div class="card service">
+        <img src="img/service2.jpg" alt="Consumables">
+        <h3 style="color:#0c5b83;margin-top:10px;">Consumables</h3>
+        <p style="color:#666;line-height:1.9;">
+          Essential laboratory consumables including tubes, gloves, reagents, and everyday testing materials—always consistent, always dependable.
+        </p>
+      </div>
+
+      <div class="card service">
+        <img src="img/service3.jpg" alt="Rapid Test Kits">
+        <h3 style="color:#0c5b83;margin-top:10px;">Rapid Test Kits</h3>
+        <p style="color:#666;line-height:1.9;">
+          Fast and efficient rapid test kits that support quick medical screening—helping teams act sooner with confidence.
+        </p>
+      </div>
+
+      <div class="card service">
+        <img src="img/service4.jpg" alt="Clinical Support">
+        <h3 style="color:#0c5b83;margin-top:10px;">Clinical Support</h3>
+        <p style="color:#666;line-height:1.9;">
+          Professional guidance and support to help healthcare facilities maintain smooth, quality laboratory operations every day.
+        </p>
+      </div>
+
+      <div class="card service">
+        <img src="img/service5.jpg" alt="Training">
+        <h3 style="color:#0c5b83;margin-top:10px;">Training</h3>
+        <p style="color:#666;line-height:1.9;">
+          Hands-on training for laboratory personnel—covering equipment usage, safety, and best practices for stronger performance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="stats"><div class="container statsgrid">
+<div><div class="counter" data-target="30">0</div><span style="display:inline-block;margin-left:6px;">Products</span></div>
+<div><div class="counter" data-target="50">0</div><span style="display:inline-block;margin-left:6px;">Clients</span></div>
+<div><div class="counter" data-target="98">0</div>% Rating</div>
+<div><div class="counter" data-target="24">0</div>/7 Support</div>
+</div></section>
+<section id="why" class="section fade">
+    <div class="container">
+
+        <h2 style="
+            text-align:center;
+            font-size:42px;
+            color:#0c5b83;
+            margin-bottom:15px;
+            font-weight:700;">
+            Why Choose MEDZYME?
+        </h2>
+
+        <p style="
+            max-width:950px;
+            margin:0 auto 50px;
+            text-align:center;
+            font-size:18px;
+            line-height:1.9;
+            color:#555;">
+            <strong>MEDZYME Lab Supplies</strong> is committed to delivering
+            exceptional laboratory and healthcare solutions built on
+            <strong>quality, precision, integrity, and innovation.</strong>
+            We proudly support hospitals, laboratories, clinics, and research
+            institutions by providing reliable medical products and professional
+            services that inspire confidence and contribute to better healthcare outcomes.
+        </p>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div style="font-size:45px;margin-bottom:15px;">🛡️</div>
+
+                <h3 style="color:#0c5b83;margin-bottom:12px;">
+                    Quality Assurance
+                </h3>
+
+                <p style="line-height:1.8;color:#666;">
+                    Every laboratory product is carefully sourced from trusted
+                    manufacturers and selected to meet rigorous quality standards,
+                    ensuring dependable performance, accuracy, and long-lasting reliability.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div style="font-size:45px;margin-bottom:15px;">💰</div>
+
+                <h3 style="color:#0c5b83;margin-bottom:12px;">
+                    Affordable Pricing
+                </h3>
+
+                <p style="line-height:1.8;color:#666;">
+                    We deliver premium laboratory and medical supplies at highly
+                    competitive prices, offering exceptional value without ever
+                    compromising on quality or service excellence.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div style="font-size:45px;margin-bottom:15px;">🚚</div>
+
+                <h3 style="color:#0c5b83;margin-bottom:12px;">
+                    Trusted Delivery
+                </h3>
+
+                <p style="line-height:1.8;color:#666;">
+                    Our efficient logistics system guarantees fast, secure,
+                    and reliable delivery, ensuring your laboratory operations
+                    continue smoothly and without unnecessary delays.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div style="font-size:45px;margin-bottom:15px;">👨‍⚕️</div>
+
+                <h3 style="color:#0c5b83;margin-bottom:12px;">
+                    Professional Support
+                </h3>
+
+                <p style="line-height:1.8;color:#666;">
+                    Our knowledgeable support team is always available to provide
+                    expert advice, product recommendations, and responsive assistance,
+                    helping you make informed decisions with complete confidence.
+                </p>
+            </div>
+
+        </div>
+
+<section id="ceo" class="section fade">
+    <div class="container ceoflex">
+
+        <div class="ceo-frame">
+            <img src="img/ceo.jpg.jpg" alt="CEO" width="320">
+        </div>
+
+        <div class="ceo-content">
+
+            <span class="ceo-tag">
+                Founder & Chief Executive Officer
+            </span>
+
+            <h2 class="ceo-title">
+                Meet Our CEO
+            </h2>
+
+            <h3 class="ceo-name">
+                ABDULGANIU QAYUMOT
+            </h3>
+
+            <p class="ceo-text">
+                At <strong>MEDZYME Lab Supplies</strong>, our commitment is to provide
+                premium laboratory and medical supplies that empower healthcare
+                professionals with precision, reliability, and excellence.
+            </p>
+
+            <p class="ceo-text">
+                As the Founder and Chief Executive Officer, my vision is to build a
+                trusted organization that consistently delivers quality products,
+                innovative laboratory solutions, and exceptional customer service
+                that contribute to better healthcare outcomes and scientific
+                advancement.
+            </p>
+
+            <p class="ceo-text">
+                We believe that integrity, innovation, professionalism, and customer
+                satisfaction are the pillars of our success. Through these values,
+                we continue to establish lasting partnerships with hospitals,
+                laboratories, research institutions, and healthcare providers
+                across Nigeria and beyond.
+            </p>
+
+            <p class="ceo-text">
+                Thank you for choosing <strong>MEDZYME Lab Supplies</strong> as your
+                trusted partner in laboratory excellence. We remain dedicated to
+                serving you with quality, precision, accuracy, and affordability.
+            </p>
+
+
+        </div>
+
+    </div>
+</section>
+<section id="gallery" class="section fade">
+
+<div class="container">
+
+<h2 style="text-align:center;font-size:40px;color:#0c5b83;">Product Gallery</h2>
+
+<p style="text-align:center;font-size:18px;color:#666;margin-bottom:35px;">
+Dedicated showcase of our laboratory and medical products.
+</p>
+
+<div class="product-gallery">
+
+<div class="product-card">
+
+<img src="img/product1.jpg" alt="Digital Miscroscope">
+
+<h3>Digital Miscroscope</h3>
+
+<p>
+A device that magnifies tiny objects and displays clear images on a computer or screen for easy viewing.
+</p>
+
+</div>
+
+<div class="product-card">
+
+<img src="img/product2.jpg" alt="Laboratory Breaker & Flasks">
+
+<h3>Laboratory Breaker & Flasks</h3>
+
+<p>
+Glass containers used for mixing, heating, storing, and measuring liquids during laboratory experiments and testing.
+</p>
+
+</div>
+
+<div class="product-card">
+
+<img src="img/product3.jpg" alt="Disposable Medical Gloves">
+
+<h3>Disposable Medical Gloves</h3>
+
+<p>
+Single-use protective gloves worn by healthcare workers to prevent germs, contamination, and infection spread.
+</p>
+
+</div>
+
+<div class="product-card">
+
+<img src="img/product4.jpg" alt="Blood Collector Tubes">
+
+<h3>Blood Collector Tubes</h3>
+
+<p>
+Special tubes used to safely collect, store, and transport blood samples for laboratory testing.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="section fade"><div class="container"><h2>Partners</h2><div class="carousel">
+<div class='card'><img src='img/partner1.png' alt='Odesqua venture'><p style="color:#0c5b83;font-weight:700;margin:10px 0 0;">Odesqua Venture</p><p style="margin:8px 0 0;color:#666;font-size:15px;line-height:1.8;">Trusted collaboration in power supply & lab support.</p></div>
+<div class='card'><img src='img/partner2.png' alt='IP-Photomedia'><p style="color:#0c5b83;font-weight:700;margin:10px 0 0;">IP-Photomedia</p><p style="margin:8px 0 0;color:#666;font-size:15px;line-height:1.8;">Creative media support for smarter visibility & outreach.</p></div>
+<div class='card'><img src='img/partner3.png' alt='Medzyme Lab Partner'><p style="color:#0c5b83;font-weight:700;margin:10px 0 0;">Medzyme Lab Partner</p><p style="margin:8px 0 0;color:#666;font-size:15px;line-height:1.8;">Working together to strengthen lab performance & consistency.</p></div>
+<div class='card'><img src='img/partner4.png' alt='Medzyme Labs Partner'><p style="color:#0c5b83;font-weight:700;margin:10px 0 0;">Medzyme Labs Partner</p><p style="margin:8px 0 0;color:#666;font-size:15px;line-height:1.8;">Reliable collaboration for better lab supply chains.</p></div>
+<div class='card'><img src='img/partner5.png' alt='Medzyme Labs Innovation Partner'><p style="color:#0c5b83;font-weight:700;margin:10px 0 0;">Medzyme Labs Innovation Partner</p><p style="margin:8px 0 0;color:#666;font-size:15px;line-height:1.8;">Innovation-focused support for smarter diagnostics.</p></div>
+</div></div></section>
+<section id="testimonials" class="section fade"><div class="container"><h2>Testimonials</h2><div class="grid">
+<div class="card testimonial"><img src="img/testimonial1.jpg"><p>Excellent service ★★★★★</p></div>
+<div class="card testimonial"><img src="img/testimonial2.jpg"><p>Reliable supplier ★★★★★</p></div>
+<div class="card testimonial"><img src="img/testimonial3.jpg"><p>Quality products ★★★★★</p></div>
+<div class="card testimonial"><img src="img/testimonial4.jpg"><p>Fast delivery ★★★★★</p></div>
+</div></div></section>
+<section id="contact" class="section fade">
+    <div class="container">
+
+        <h2 style="text-align:center;font-size:42px;color:#0c5b83;margin-bottom:15px;font-weight:700;">Connect With Us</h2>
+
+        <p style="max-width:950px;margin:0 auto 40px;text-align:center;font-size:18px;line-height:1.9;color:#555;">
+            We’d love to hear from you. Reach out for product inquiries, bulk supply requests, quotations, and support.
+        </p>
+
+        <div class="contactbox" style="align-items:start;">
+
+            <div class="card" style="padding:22px;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
+                <h3 style="color:#0c5b83;margin-bottom:12px;">Call Us</h3>
+                <p style="margin:0 0 10px;font-size:16px;color:#444;">📞 <strong>+2349071584643</strong></p>
+                <p style="margin:0;font-size:16px;color:#444;">📞 <strong>+2349167141936</strong></p>
+            </div>
+
+            <div class="card" style="padding:22px;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,.08);">
+                <h3 style="color:#0c5b83;margin-bottom:12px;">Email Us</h3>
+                <p style="margin:0 0 10px;font-size:16px;color:#444;">📧 <strong>medzyelabs@gmail.com</strong></p>
+                <p style="margin:0;font-size:16px;color:#444;">📧 <strong>itunuolateminiikan@gmail.com</strong></p>
+            </div>
+
+            <div class="card" style="padding:22px;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;">
+                <h3 style="color:#0c5b83;margin-bottom:12px;">Quick Scan</h3>
+                <img src="img/qrcode.png" alt="Scan QR" style="width:180px;max-width:100%;border-radius:12px;display:block;margin:0 auto 10px;">
+                <p style="margin:0;font-size:16px;color:#444;">Scan QR to connect</p>
+
+<div class="social-icons">
+
+<a class="social-whatsapp"
+href="https://wa.me/qr/OHSKGRYBWYZHA1"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+WhatsApp
+
+</a>
+
+
+<a class="social-facebook"
+href="https://www.facebook.com/profile.php?id=100091502422754"
+target="_blank">
+
+<i class="fab fa-facebook-f"></i>
+
+Facebook
+
+</a>
+
+
+<a class="social-instagram"
+href="https://www.instagram.com/quizzydazzle?utm_source=qr&igsh=MWVxMXdta2x6ODliZw=="
+target="_blank">
+
+<i class="fab fa-instagram"></i>
+
+Instagram
+
+</a>
+
+
+<a class="social-tiktok"
+href="https://www.tiktok.com/@qayumotitunnu?_r=1&_d=f37lic0dl82j41&sec_uid=MS4wLjABAAAA9CW8PsySAPo_pBxOfu6JhedDIlAILnhBd2ruZlF-2R-tH1CNZyaY1qQiIUxc2Fxb&share_author_id=7566378612993360914&sharer_language=en&source=h5_m&u_code=f062id9jk33jkd&timestamp=1781551291&user_id=7566378612993360914&sec_user_id=MS4wLjABAAAA9CW8PsySAPo_pBxOfu6JhedDIlAILnhBd2ruZlF-2R-tH1CNZyaY1qQiIUxc2Fxb&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7642268665074075408&share_link_id=06dbf094-a6b2-4383-b4fe-5cab60cb1c69&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"
+target="_blank">
+
+<i class="fab fa-tiktok"></i>
+
+TikTok
+
+</a>
+
+</div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<footer>
+<p style="font-size:22px;font-weight:bold;">
+©2026 MEDZYME Lab Supplies
+</p>
+
+<div class="footer-social">
+
+<a href="https://www.facebook.com/profile.php?id=100091502422754" target="_blank">
+<i class="fab fa-facebook-f"></i>
+Facebook
+</a>
+
+<a href="https://www.instagram.com/quizzydazzle?utm_source=qr&igsh=MWVxMXdta2x6ODliZw==" target="_blank">
+<i class="fab fa-instagram"></i>
+Instagram
+</a>
+
+<a href="https://www.tiktok.com/@qayumotitunnu?_r=1&_d=f37lic0dl82j41&sec_uid=MS4wLjABAAAA9CW8PsySAPo_pBxOfu6JhedDIlAILnhBd2ruZlF-2R-tH1CNZyaY1qQiIUxc2Fxb&share_author_id=7566378612993360914&sharer_language=en&source=h5_m&u_code=f062id9jk33jkd&timestamp=1781551291&user_id=7566378612993360914&sec_user_id=MS4wLjABAAAA9CW8PsySAPo_pBxOfu6JhedDIlAILnhBd2ruZlF-2R-tH1CNZyaY1qQiIUxc2Fxb&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7642268665074075408&share_link_id=06dbf094-a6b2-4383-b4fe-5cab60cb1c69&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1" target="_blank">
+<i class="fab fa-tiktok"></i>
+TikTok
+</a>
+
+<a href="https://wa.me/qr/OHSKGRYBWYZHA1" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+
+<p style="margin-top:25px;">
+Quick Links : Home | Services | CEO | Contact
+</p>
+
+</footer>
+<a class="whatsapp" href="https://wa.me/2349071584643">💬</a>
+<script>
+document.querySelectorAll('.counter').forEach(c=>{let t=+c.dataset.target,n=0;let i=setInterval(()=>{n++;if(n>=t){n=t;c.textContent=n+ (t===50 ? '+' : '');clearInterval(i);}else{c.textContent=n;}},20)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));
+document.querySelectorAll('.fade').forEach(x=>io.observe(x));
+</script>
+</body></html>
